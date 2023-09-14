@@ -21,4 +21,6 @@ The `HomePage` uses a UI similar to Go-Pro's demonstration of using this library
 
 ## Screenshots
 
+![Light Blue Screenshot](https://github.com/bmalumphy/ble-capacitor-demonstration/assets/28659220/a68c9032-4a3f-48a5-9055-4ddb399af043)
 
+https://github.com/bmalumphy/ble-capacitor-demonstration/assets/28659220/4bf0487b-b915-4ecb-82cc-15cc4c8da4c7
