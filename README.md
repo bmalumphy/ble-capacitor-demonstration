@@ -2,7 +2,7 @@
 
 ## Summary
 
-BLE is a complicated and volatile protocol implementation on mobile. This repository is meant to demonstrate my proficiency in understanding how the ecosystem of BLE on Android + iOS works. We will use [This plugin for Capacitor](https://github.com/capacitor-community/bluetooth-le) for the Satellite Manager logic to speed up the process. While it doesn't implement modern Swift/Kotlin best practices, neither does it provide peripheral management nor reconnection management, it's sufficient for this demonstration. The devices that I posess do not have open ended APIs or GATT services for demonstration purposes, so I used [LightBlue for virtual BLE simulation](https://github.com/capacitor-community/bluetooth-le).
+BLE is a complicated and volatile protocol implementation on mobile. This repository is meant to demonstrate my proficiency in understanding how the ecosystem of BLE on Android + iOS works. We will use [This plugin for Capacitor](https://github.com/capacitor-community/bluetooth-le) for the Satellite Manager logic to speed up the process. While it doesn't implement modern Swift/Kotlin best practices, neither does it provide peripheral management nor reconnection management, it's sufficient for this demonstration. The devices that I posess do not have open ended APIs or GATT services for demonstration purposes, so I used [LightBlue for virtual BLE simulation](https://apps.apple.com/us/app/lightblue/id557428110).
 
 Note that for practical purposes related to the business associated with this project, I used Angular and Typescript for the front end. However, my experience is limited to around a year in these areas-which was some time ago-so be mindful that there may be some misses on perfect execution.
 
@@ -18,3 +18,7 @@ The service has five main functionalities:
 5. Similarly perform a `Write` operation to a simulated Characteristic.
 
 The `HomePage` uses a UI similar to Go-Pro's demonstration of using this library. We use the `Observable` patterns (or `Pub-sub pattern`) to communicate state changes from the `BLESatelliteManagerService` to the `HomePage`.
+
+## Screenshots
+
+
