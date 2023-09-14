@@ -32,25 +32,25 @@ Requirements for Running this Repo
 Node >=16 & NPM
 
 Recommend using nvm to install & manage node versions - https://github.com/nvm-sh/nvm
-nvm install 16
-nvm use 16
+- nvm install 16
+- nvm use 16
 Ionic CLI 7.1.1
 
-npm i -g @ionic/cli@7.1.1
+- npm i -g @ionic/cli@7.1.1
 Run project for development
 
 Install dependencies
 
-npm install
+- npm install
 Run project in browser @ http://localhost:4200/
 
-npm run start
+- npm run start
 Run On Android
 
 Add Android Platform
 
-npm install @capacitor/android
-npx cap add android
+- npm install @capacitor/android
+- npx cap add android
 Ensure that you have a www/ assets folder in the root; please add one and drop in a copy of the index.html from the src/ folder
 Open Android Studio
 
@@ -58,7 +58,7 @@ Confirm you are using the embedded JDK of 11 or above
 Run the build and run directly on device
 Make Changes to the Src Files
 
-npm run build
-npx cap copy
+- npm run build
+- npx cap copy
 Re-run on the device from Android Studio
 Documentation for reference: https://capacitorjs.com/docs/android
