@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      HRS FE Challenge
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HRS FE Challenge</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-button
+      expand="block"
+      [disabled]="bluetoothIsScanning"
+      (click)="bleSatelliteManagerService.scanForBluetoothDevices()"
+    >
+      {{ bluetoothIsScanning?"Scaning":"Scan for bluetooth devices" }}
+    </ion-button>
+
+    <ng-container *ngIf="bleSatelliteManagerService.bluetoothScanResults.length>0">
+      <ion-item *ngFor="let scanResult of bleSatelliteManagerService.bluetoothScanResults">
+        <ion-label>
+          <h2>{{scanResult.device.name ?? "NO name" }}</h2>
+          <p style="font-size: 8px">{{scanResult.device.deviceId}}</p>
+        </ion-label>
+
+        <ion-button
+          (click)="bleSatelliteManagerService.disconnectFromBluetoothDevice(scanResult)"
+          color="danger"
+          slot="end"
+        >
+          Disconnect
+        </ion-button>
+
+        <ion-button (click)="bleSatelliteManagerService.connectToBluetoothDevice(scanResult)" slot="end">
+          Connect
+        </ion-button>
+      </ion-item>
+    </ng-container>
+
+    <ng-container *ngIf="isConnected" style="margin-top: 40px">
+      <ion-list-header>
+        CONNECTED TO: {{bleSatelliteManagerService.bluetoothConnectedDevice?.device?.name ?? "NO NAME"}} ✅
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Show Heart Rate</ion-label>
+        <ion-button slot="end" (click)="bleSatelliteManagerService.sendBluetoothReadCommand()"> send </ion-button>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+</ion-content>
